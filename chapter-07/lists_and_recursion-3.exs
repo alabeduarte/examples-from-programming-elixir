@@ -12,14 +12,14 @@ defmodule MyList do
   @first_character ?a
 
   def caesar(list, n) do
-    list |> Enum.map(&add(&1, n)) |> List.to_string
+    list |> Enum.map(&add(&1, n)) |> List.to_string()
   end
 
   defp add(character, n) when character in @alphabet_range do
-    rem((character - @first_character + n), @alphabet_size) + @first_character
+    rem(character - @first_character + n, @alphabet_size) + @first_character
   end
 
   defp add(character, _), do: character
 end
 
-IO.inspect MyList.caesar('ryvkve', 13)
+IO.inspect(MyList.caesar('ryvkve', 13))

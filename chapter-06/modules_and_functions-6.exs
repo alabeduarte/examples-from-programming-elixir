@@ -47,13 +47,13 @@ defmodule Chop do
   def guess(actual, lower..higher) when actual > middle(lower, higher) do
     print_step(middle(lower, higher))
 
-    guess(actual, (middle(lower, higher)..higher))
+    guess(actual, middle(lower, higher)..higher)
   end
 
   defp print_step(current_number) do
-    IO.puts "Is it #{current_number}"
+    IO.puts("Is it #{current_number}")
     current_number
   end
 end
 
-IO.inspect Chop.guess(273, 1..1000)
+IO.inspect(Chop.guess(273, 1..1000))

@@ -16,4 +16,4 @@ defmodule MyList do
   def custom_max(list), do: custom_max(list, -1)
 end
 
-IO.inspect MyList.custom_max([2, 1, 4, 3])
+IO.inspect(MyList.custom_max([2, 1, 4, 3]))

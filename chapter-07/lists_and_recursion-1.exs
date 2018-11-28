@@ -16,4 +16,4 @@ defmodule MyList do
   end
 end
 
-IO.inspect MyList.mapsum [1, 2, 3], &(&1 * &1)
+IO.inspect(MyList.mapsum([1, 2, 3], &(&1 * &1)))

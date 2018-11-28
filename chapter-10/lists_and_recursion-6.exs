@@ -14,26 +14,28 @@ defmodule MyList do
   def flatten(head), do: [head]
 end
 
-IO.puts """
+IO.puts("""
 >>>
   given the input [1, [[2], 3]]
     it flattens the array
       returning [1, 2, 3]
-"""
-IO.puts '>>> MyList: '
-IO.inspect(MyList.flatten([1, [[2], 3]]))
-IO.puts '>>> List: '
-IO.inspect(List.flatten([1, [[2], 3]]))
-IO.puts '\n'
+""")
 
-IO.puts """
+IO.puts('>>> MyList: ')
+IO.inspect(MyList.flatten([1, [[2], 3]]))
+IO.puts('>>> List: ')
+IO.inspect(List.flatten([1, [[2], 3]]))
+IO.puts('\n')
+
+IO.puts("""
 >>>
   given the input [ 1, [2, 3, [4]], 5, [[[6]]]]
     it flattens the array
       returning [1, 2, 3, 4, 5, 6]
-"""
-IO.puts '>>> MyList: '
-IO.inspect(MyList.flatten([ 1, [2, 3, [4]], 5, [[[6]]]]))
-IO.puts '>>> List: '
-IO.inspect(List.flatten([ 1, [2, 3, [4]], 5, [[[6]]]]))
-IO.puts '\n'
+""")
+
+IO.puts('>>> MyList: ')
+IO.inspect(MyList.flatten([1, [2, 3, [4]], 5, [[[6]]]]))
+IO.puts('>>> List: ')
+IO.inspect(List.flatten([1, [2, 3, [4]], 5, [[[6]]]]))
+IO.puts('\n')

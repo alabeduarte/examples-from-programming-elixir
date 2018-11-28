@@ -8,4 +8,4 @@ defmodule MyList do
   def span(from, to), do: [from | span(from + 1, to)]
 end
 
-IO.inspect MyList.span(10, 1)
+IO.inspect(MyList.span(10, 1))

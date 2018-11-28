@@ -5,10 +5,10 @@
 # You should get “Buzz, 11, Fizz, 13, 14, FizzBuzz, 16.”
 
 fizz_buzz_rules = fn
-  (0, 0, _) -> "FizzBuzz"
-  (0, _, _) -> "Fizz"
-  (_, 0, _) -> "Buzz"
-  (_, _, n) -> n
+  0, 0, _ -> "FizzBuzz"
+  0, _, _ -> "Fizz"
+  _, 0, _ -> "Buzz"
+  _, _, n -> n
 end
 
 fizz_buzz = fn n ->
