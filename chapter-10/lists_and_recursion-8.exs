@@ -39,8 +39,7 @@ orders_with_total_amount = fn orders, tax_rates ->
       do:
         order ++
           [
-            total_amount:
-              order[:net_amount] + (tax_rates |> Keyword.get(order[:ship_to], 0))
+            total_amount: order[:net_amount] + (tax_rates |> Keyword.get(order[:ship_to], 0))
           ]
 end
 
