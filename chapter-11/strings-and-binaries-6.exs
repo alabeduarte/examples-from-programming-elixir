@@ -7,7 +7,7 @@
 defmodule Sentence do
   def capitalize_sentences(str) do
     String.split(str, ". ")
-    |> Enum.map(&(String.capitalize(&1)))
+    |> Enum.map(&String.capitalize(&1))
     |> Enum.join(". ")
     |> to_string
   end
