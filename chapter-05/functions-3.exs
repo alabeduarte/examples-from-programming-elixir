@@ -15,10 +15,4 @@ fizz_buzz = fn n ->
   fizz_buzz_rules.(rem(n, 3), rem(n, 5), n)
 end
 
-IO.inspect(fizz_buzz.(10))
-IO.inspect(fizz_buzz.(11))
-IO.inspect(fizz_buzz.(12))
-IO.inspect(fizz_buzz.(13))
-IO.inspect(fizz_buzz.(14))
-IO.inspect(fizz_buzz.(15))
-IO.inspect(fizz_buzz.(16))
+Enum.each(1..30, fn n -> IO.inspect(fizz_buzz.(n)) end)
