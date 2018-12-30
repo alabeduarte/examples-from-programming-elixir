@@ -20,4 +20,4 @@ defmodule LinkingTwoProcesses.Link do
   end
 end
 
-WhenProcessesDie.Link.run()
+LinkingTwoProcesses.Link.run()
