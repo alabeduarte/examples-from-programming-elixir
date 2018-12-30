@@ -1,4 +1,4 @@
-defmodule Chain do
+defmodule ProcessOverhead.Chain do
   def counter(next_pid) do
     receive do
       n ->
@@ -21,7 +21,7 @@ defmodule Chain do
   end
 
   def run(n) do
-    :timer.tc(Chain, :create_processes, [n])
+    :timer.tc(ProcessOverhead.Chain, :create_processes, [n])
     |> IO.inspect()
   end
 end
