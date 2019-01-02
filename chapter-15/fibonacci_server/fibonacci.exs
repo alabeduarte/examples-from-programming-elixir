@@ -1,4 +1,4 @@
-defmodule FibonacciSolver do
+defmodule FibSolver do
   def fib(scheduler) do
     send(scheduler, {:ready, self()})
 
@@ -53,7 +53,7 @@ Enum.each(1..10, fn num_processes ->
     :timer.tc(
       Scheduler,
       :run,
-      [num_processes, FibonacciSolver, :fib, to_process]
+      [num_processes, FibSolver, :fib, to_process]
     )
 
   if num_processes == 1 do
